@@ -67,6 +67,9 @@ def n12br_filter(s):
     """改行文字を br タグに置き換えるテンプレートフィルター"""
     return escape(s).replace('\n', Markup('<br>'))
 
+def main():
+    application.run('127.0.0.1', 8000)
+
 if __name__ == "__main__":
-    # IPアドレス0.0.0.0の8000番ポートでアプリケーションを実行する
-    application.run('0.0.0.0', 8000, debug=True)
+    # IPアドレス127.0.0.1の8000番ポートでアプリケーションを実行する
+    application.run('127.0.0.1', 8000, debug=True)
